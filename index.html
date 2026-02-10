@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>yVeo AI - оживи фото</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Glow CTA */
+    .glow {
+      box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+      transition: all 0.3s ease;
+    }
+    .glow:hover {
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.9);
+      transform: translateY(-1px);
+    }
+
+    /* Fade in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video id="bgVideo"
+  autoplay
+  muted
+  loop
+  playsinline
+  class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-40">
+  <source src="yveo_background.mp4" type="video/mp4">
+</video>
+
+<!-- DARK OVERLAY -->
+<div class="fixed inset-0 bg-black/60 -z-10"></div>
+
+<!-- HERO -->
+<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 fade-in">
+  <img src="logo_1.png" alt="yVeo AI" class="w-40 mb-8">
+
+  <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+    Оживи фото подруги <br class="hidden md:block">
+    в любых позах
+  </h1>
+
+  <p class="text-gray-300 max-w-xl mb-10">
+    yVeo AI превращает обычное фото в реалистичное видео 18+ прямо в Telegram
+  </p>
+
+  <a href="https://t.me/yveo_online"
+     class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
+    Оживить фото в Telegram
+  </a>
+
+  <p class="text-xs text-gray-400 mt-4">18+ • Private • Telegram-native</p>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="relative py-24 px-6 fade-in">
+  <h2 class="text-3xl font-bold text-center mb-12">До / После</h2>
+
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+    <div class="bg-zinc-900 rounded-xl p-4">
+      <p class="text-sm text-gray-400 mb-2">До обработки</p>
+      <div class="h-64 bg-zinc-800 rounded-lg flex items-center justify-center text-gray-500">
+        Фото
+      </div>
+    </div>
+
+    <div class="bg-zinc-900 rounded-xl p-4">
+      <p class="text-sm text-gray-400 mb-2">После обработки</p>
+      <div class="h-64 bg-zinc-800 rounded-lg flex items-center justify-center text-purple-400">
+        Видео
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="relative py-24 px-6 bg-zinc-950 fade-in">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+    <ul class="space-y-4 text-lg">
+      <li>🔥 Более 20 сценариев видео-генерации</li>
+      <li>🎭 Более 20 образов для фото</li>
+      <li>⚡ Быстрая AI-обработка</li>
+      <li>🔒 Приватно и анонимно</li>
+    </ul>
+
+    <div class="text-gray-300 space-y-4">
+      <p>Попробуй оживить фото понравившейся девушки прямо сейчас.</p>
+      <p>Мечтал о недоступной девушке? Мечты сбываются - yVeo AI.</p>
+      <p>Фантазия, которую ты контролируешь.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="relative py-24 px-6 text-center fade-in">
+  <h2 class="text-3xl font-bold mb-8">
+    Готов увидеть больше, чем просто фото?
+  </h2>
+
+  <a href="https://t.me/yveo_online"
+     class="glow bg-purple-600 px-12 py-4 rounded-xl text-lg font-semibold">
+    Перейти в Telegram
+  </a>
+
+  <p class="text-xs text-gray-400 mt-4">18+ • Private use only</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative py-10 text-center text-sm text-gray-500">
+  <p class="mb-2">© yVeo AI</p>
+  <a href="https://telegra.ph/Terms-of-Use-02-04-4" class="hover:text-purple-400 mx-2">Terms</a>
+  <a href="https://telegra.ph/Refund-Policy-02-04" class="hover:text-purple-400 mx-2">Refund Policy</a>
+</footer>
+
+<!-- JS -->
+<script>
+/* Parallax video */
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const video = document.getElementById('bgVideo');
+  video.style.transform = `translateY(${scrolled * 0.15}px)`;
+});
+
+/* Fade in observer */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
