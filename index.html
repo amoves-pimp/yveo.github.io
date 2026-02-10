@@ -45,13 +45,15 @@
 <body>
 
 <!-- VIDEO BACKGROUND -->
-<video id="bgVideo"
+<video
+  id="bgVideo"
   autoplay
   muted
   loop
   playsinline
+  preload="auto"
   class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-40">
-  <source src="yveo_background.mp4" type="video/mp4">
+  <source src="assets/yveo_background.mp4" type="video/mp4">
 </video>
 
 <!-- DARK OVERLAY -->
@@ -142,9 +144,9 @@
 <script>
 /* Parallax video */
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
   const video = document.getElementById('bgVideo');
-  video.style.transform = `translateY(${scrolled * 0.15}px)`;
+  if (!video) return;
+  video.style.transform = `translateY(${window.scrollY * 0.15}px)`;
 });
 
 /* Fade in observer */
@@ -161,3 +163,4 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 </body>
 </html>
+
