@@ -81,26 +81,53 @@
   <p class="text-xs text-gray-400 mt-4">18+ • Private • Telegram-native</p>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section class="relative py-24 px-6 fade-in">
-  <h2 class="text-3xl font-bold text-center mb-12">До / После</h2>
+<!-- BEFORE / AFTER GRID -->
+<section class="relative py-24 px-6 bg-zinc-950 fade-in">
+  <div class="max-w-6xl mx-auto">
 
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-    <div class="bg-zinc-900 rounded-xl p-4">
-      <p class="text-sm text-gray-400 mb-2">До обработки</p>
-      <div class="h-64 bg-zinc-800 rounded-lg flex items-center justify-center text-gray-500">
-        Фото
-      </div>
-    </div>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+      До / После
+    </h2>
 
-    <div class="bg-zinc-900 rounded-xl p-4">
-      <p class="text-sm text-gray-400 mb-2">После обработки</p>
-      <div class="h-64 bg-zinc-800 rounded-lg flex items-center justify-center text-purple-400">
-        Видео
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- BEFORE (1 slot) -->
+      <div class="group relative aspect-square bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.4)]">
+        <img src="./assets/before.jpg"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-gray-300 font-semibold text-lg transition group-hover:bg-black/20">
+          До обработки
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+
+      <!-- AFTER 1 -->
+      <div class="group relative aspect-square bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+        <video autoplay muted loop playsinline preload="auto"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <source src="./assets/after1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- AFTER 2 -->
+      <div class="group relative aspect-square bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+        <video autoplay muted loop playsinline preload="auto"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <source src="./assets/after2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- AFTER 3 -->
+      <div class="group relative aspect-square bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]">
+        <video autoplay muted loop playsinline preload="auto"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <source src="./assets/after3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- AFTER 4 -->
+      <div class="group relative aspect-square bg-zinc-800 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247_]()
+
 
 <!-- FEATURES -->
 <section class="relative py-24 px-6 bg-zinc-950 fade-in">
