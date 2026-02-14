@@ -39,6 +39,9 @@
       opacity: 1;
       transform: translateY(0);
     }
+    #bgVideo {
+  transform: none !important;
+    }
   </style>
 </head>
 
@@ -198,11 +201,7 @@
 <!-- JS -->
 <script>
 /* Parallax video */
-window.addEventListener('scroll', () => {
-  const video = document.getElementById('bgVideo');
-  if (!video) return;
-  video.style.transform = `translateY(${window.scrollY * 0.15}px)`;
-});
+
 
 /* Fade in observer */
 const observer = new IntersectionObserver(entries => {
