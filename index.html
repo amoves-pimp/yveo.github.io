@@ -71,10 +71,12 @@
       </a>
 
       <!-- LANGUAGE -->
-      <button class="w-10 h-10 rounded-full bg-zinc-900 border border-purple-500/20
-                     hover:border-purple-500 transition flex items-center justify-center">
-        🇬🇧
-      </button>
+      <button onclick="openLang()"
+        class="w-10 h-10 rounded-full bg-zinc-900 border border-purple-500/20
+               hover:border-purple-500 transition flex items-center justify-center">
+  🌐
+</button>
+
 
     </div>
 
@@ -272,6 +274,64 @@ const observer = new IntersectionObserver(entries => {
 });
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+<!-- LANGUAGE MODAL -->
+<div id="langModal"
+     class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+
+  <div class="w-full max-w-lg mx-4 bg-gradient-to-b from-purple-900 to-purple-950
+              rounded-3xl p-8 relative border border-purple-500/20">
+
+    <!-- CLOSE -->
+    <button onclick="closeLang()"
+            class="absolute top-5 right-6 text-white text-2xl opacity-70 hover:opacity-100">
+      ✕
+    </button>
+
+    <h2 class="text-3xl font-bold mb-8">Language</h2>
+
+    <div class="space-y-4">
+
+      <button onclick="setLang('en')"
+        class="w-full flex items-center justify-between px-6 py-4
+               rounded-xl bg-purple-700/40 hover:bg-purple-700/60
+               transition text-lg">
+        <span>🇬🇧 English</span>
+      </button>
+
+      <button onclick="setLang('ru')"
+        class="w-full flex items-center justify-between px-6 py-4
+               rounded-xl bg-purple-700/20 hover:bg-purple-700/40
+               transition text-lg">
+        <span>🇷🇺 Русский</span>
+      </button>
+
+      <button onclick="setLang('zh')"
+        class="w-full flex items-center justify-between px-6 py-4
+               rounded-xl bg-purple-700/20 hover:bg-purple-700/40
+               transition text-lg">
+        <span>🇨🇳 中文</span>
+      </button>
+
+    </div>
+  </div>
+</div>
+<script>
+function openLang() {
+  document.getElementById('langModal').classList.remove('hidden');
+  document.getElementById('langModal').classList.add('flex');
+}
+
+function closeLang() {
+  document.getElementById('langModal').classList.add('hidden');
+  document.getElementById('langModal').classList.remove('flex');
+}
+
+function setLang(lang) {
+  localStorage.setItem('lang', lang);
+  closeLang();
+  alert('Language switched to: ' + lang);
+}
 </script>
 
 </body>
