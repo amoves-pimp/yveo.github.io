@@ -253,10 +253,8 @@
 function changeVideo(src, el) {
   const video = document.getElementById('scenarioVideo');
 
-  video.pause();
   video.src = src;
   video.load();
-  video.play();
 
   document.querySelectorAll('.scenario-btn')
     .forEach(btn => btn.classList.remove('active'));
