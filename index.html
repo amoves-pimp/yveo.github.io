@@ -108,24 +108,49 @@ class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
 
     <div class="grid md:grid-cols-2 gap-12 items-start">
 
-      <!-- VIDEO -->
-      <div class="flex flex-col items-center">
+  <!-- LEFT SIDE (VIDEO + MODELS) -->
+  <div class="flex flex-col items-center">
 
-        <div class="relative w-full max-w-xs aspect-[9/16] rounded-2xl overflow-hidden
-                    bg-black/40 border border-purple-500/20
-                    shadow-[0_0_40px_rgba(168,85,247,0.35)]">
+    <!-- MODELS -->
+    <div class="flex gap-4 mb-6 order-1 md:order-2">
 
-          <video id="scenarioVideo"
-                 autoplay
-                 muted
-                 loop
-                 playsinline
-                 preload="auto"
-                 class="w-full h-full object-cover">
-            <source src="assets/model1_s1.mp4" type="video/mp4">
-          </video>
+      <div onclick="changeModel(1,this)"
+           class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/40">
+        <img src="assets/model1.jpg" class="w-full h-full object-cover">
+      </div>
 
-        </div>
+      <div onclick="changeModel(2,this)"
+           class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/20">
+        <img src="assets/model2.jpg" class="w-full h-full object-cover">
+      </div>
+
+      <div onclick="changeModel(3,this)"
+           class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/20">
+        <img src="assets/model3.jpg" class="w-full h-full object-cover">
+      </div>
+
+    </div>
+
+    <!-- VIDEO -->
+    <div class="relative w-full max-w-xs aspect-[9/16] rounded-2xl overflow-hidden
+                bg-black/40 border border-purple-500/20
+                shadow-[0_0_40px_rgba(168,85,247,0.35)]
+                order-2 md:order-1">
+
+      <video id="scenarioVideo"
+             autoplay
+             muted
+             loop
+             playsinline
+             preload="auto"
+             class="w-full h-full object-cover">
+        <source src="assets/model1_s1.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </div>
+
 
         <!-- MODELS -->
         <div class="flex gap-4 mt-6">
