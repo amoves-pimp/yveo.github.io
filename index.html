@@ -123,6 +123,66 @@
 
   </div>
 </section>
+  <section class="relative py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      Примеры сценариев генерации
+    </h2>
+
+    <!-- MAIN VIDEO -->
+    <div class="mb-12">
+      <div class="rounded-3xl overflow-hidden border border-purple-500/20
+                  bg-black/40 backdrop-blur-md
+                  hover:shadow-[0_0_60px_rgba(168,85,247,0.6)]
+                  transition duration-500">
+
+        <video id="mainVideo" autoplay muted loop playsinline
+               class="w-full h-full object-cover">
+          <source src="assets/scenario1.mp4" type="video/mp4">
+        </video>
+
+      </div>
+    </div>
+
+    <!-- SCENARIO GRID -->
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div onclick="changeVideo('assets/scenario1.mp4', this)"
+           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
+        <h3 class="font-semibold">Реалистичная анимация</h3>
+      </div>
+
+      <div onclick="changeVideo('assets/scenario2.mp4', this)"
+           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
+        <h3 class="font-semibold">Динамичный портрет</h3>
+      </div>
+
+      <div onclick="changeVideo('assets/scenario3.mp4', this)"
+           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
+        <h3 class="font-semibold">Кинематографичный стиль</h3>
+      </div>
+
+      <div onclick="changeVideo('assets/scenario4.mp4', this)"
+           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
+        <h3 class="font-semibold">Плавные движения</h3>
+      </div>
+
+      <div onclick="changeVideo('assets/scenario5.mp4', this)"
+           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
+        <h3 class="font-semibold">AI-эффект движения</h3>
+      </div>
+
+      <div onclick="changeVideo('assets/scenario6.mp4', this)"
+           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
+        <h3 class="font-semibold">Портрет в движении</h3>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
 <!-- HOW IT WORKS -->
 <section class="relative py-24 px-6">
@@ -171,6 +231,20 @@
   <a href="/terms" class="hover:text-purple-400 mx-2">Пользовательское соглашение</a>
   <a href="/refund_policy" class="hover:text-purple-400 mx-2">Политика возврата</a>
 </footer>
+<script>
+function changeVideo(src, element) {
+  const video = document.getElementById("mainVideo");
+  video.src = src;
+  video.load();
+  video.play();
+
+  document.querySelectorAll(".scenario-card").forEach(card => {
+    card.classList.remove("border-purple-500");
+  });
+
+  element.classList.add("border-purple-500");
+}
+</script>
 
 </body>
 </html>
