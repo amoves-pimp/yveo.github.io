@@ -3,307 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>yVeo AI - оживи фото</title>
+  <title>yVeo AI - AI Video Generation from Photo</title>
+  <meta name="description" content="yVeo AI - AI сервис для создания видео из фото. Быстро, приватно, через Telegram.">
+  <link rel="canonical" href="https://yveo.pro/">
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* Glow CTA */
-    .glow {
-      box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
-      transition: all 0.3s ease;
-    }
-    .glow:hover {
-      box-shadow: 0 0 60px rgba(168, 85, 247, 0.9);
-      transform: translateY(-1px);
-    }
-
-    /* Fade in */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #bgVideo {
-  transform: none !important;
-    }
+    body { font-family: 'Inter', sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+    .glow { box-shadow: 0 0 30px rgba(168,85,247,0.6); transition: all 0.3s ease; }
+    .glow:hover { box-shadow: 0 0 60px rgba(168,85,247,0.9); transform: translateY(-1px); }
+    .fade-in { opacity:0; transform: translateY(40px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity:1; transform: translateY(0); }
+    #bgVideo { transform:none !important; }
   </style>
 </head>
 
 <body>
- <!-- HEADER -->
+
 <header class="fixed top-0 left-0 w-full z-50 bg-black border-b border-purple-500/10">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- LOGO -->
     <a href="/" class="flex items-center gap-3">
-      <img src="logo_1.png" class="w-10 h-10 object-contain">
+      <img src="assets/logo_1.png" class="w-10 h-10 object-contain" alt="yVeo AI">
       <span class="text-xl font-semibold tracking-wide">
         <span class="text-purple-400">yVeo</span> AI
       </span>
     </a>
 
-    <!-- RIGHT SIDE -->
-    <div class="flex items-center gap-4">
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+      <a class="hover:text-purple-400" href="/ai-video-generator">AI Video Generator</a>
+      <a class="hover:text-purple-400" href="/animate-photo">Animate Photo</a>
+      <a class="hover:text-purple-400" href="/how-it-works">How it works</a>
+      <a class="hover:text-purple-400" href="/faq">FAQ</a>
+    </nav>
 
-      <!-- GALLERY BUTTON -->
-      <a href="#gallery"
-         class="px-6 py-2 rounded-xl bg-purple-600 hover:bg-purple-500
-                transition-all duration-300
-                shadow-[0_0_20px_rgba(168,85,247,0.4)]
-                hover:shadow-[0_0_40px_rgba(168,85,247,0.8)]">
-        Gallery
+    <div class="flex items-center gap-3">
+      <a href="#cta"
+         class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 transition-all duration-300
+                shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:shadow-[0_0_40px_rgba(168,85,247,0.8)]">
+        Try
       </a>
 
-      <!-- LANGUAGE -->
       <button onclick="openLang()"
-        class="w-10 h-10 rounded-full bg-zinc-900 border border-purple-500/20
-               hover:border-purple-500 transition flex items-center justify-center">
-  🌐
-</button>
-
-
+        class="w-10 h-10 rounded-full bg-zinc-900 border border-purple-500/20 hover:border-purple-500 transition flex items-center justify-center"
+        aria-label="Language">
+        🌐
+      </button>
     </div>
 
   </div>
 </header>
 
-
-
-<!-- VIDEO BACKGROUND -->
-<video
-  id="bgVideo"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
+<video id="bgVideo" autoplay muted loop playsinline preload="auto"
   class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
   <source src="assets/yveo_background_loop1.mp4" type="video/mp4">
 </video>
-
-<!-- DARK OVERLAY -->
 <div class="fixed inset-0 bg-black/35 -z-10"></div>
 
-
-<!-- HERO -->
-<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 fade-in">
-  <img src="logo_2.png" alt="yVeo AI" class="w-40 mb-8">
-  
-
-
+<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 fade-in">
   <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-    Оживи фото подруги <br class="hidden md:block">
-    в любых позах
+    AI video generation from photo
   </h1>
 
-  <p class="text-gray-300 max-w-xl mb-10">
-    yVeo AI превращает обычное фото в реалистичное видео 18+ прямо в Telegram
+  <p class="text-gray-300 max-w-2xl mb-10">
+    yVeo AI - сервис, который превращает изображение в короткое реалистичное видео.
+    Простой сценарий: загружаешь фото - получаешь результат.
   </p>
 
   <a href="https://t.me/yveo_online"
      class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
-    Оживить фото в Telegram
+    Open in Telegram
   </a>
 
-  <p class="text-xs text-gray-400 mt-4">18+ • Private • Telegram-native</p>
+  <p class="text-xs text-gray-400 mt-4">Private • Fast • Telegram-native</p>
 </section>
 
-<section class="relative py-28 px-6">
-  <div class="max-w-7xl mx-auto">
+<section class="relative py-16 px-6 fade-in">
+  <div class="max-w-5xl mx-auto bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/10 p-8 md:p-10">
+    <h2 class="text-3xl font-bold mb-4">What is yVeo AI</h2>
+    <p class="text-gray-300 leading-relaxed">
+      Текст для SEO - вставишь сам. Здесь нужно 300-600 слов: что это за сервис, для кого, чем отличается,
+      как устроен процесс, какие ограничения, почему приватно, и куда ведет CTA.
+    </p>
+  </div>
+</section>
 
-    <h2 class="text-5xl font-bold text-center mb-20">
-      From Static to Alive
-    </h2>
+<section class="relative py-16 px-6 fade-in">
+  <div class="max-w-5xl mx-auto bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/10 p-8 md:p-10">
+    <h2 class="text-3xl font-bold mb-6">How it works</h2>
+    <ol class="list-decimal pl-6 space-y-2 text-gray-300">
+      <li>Upload a photo</li>
+      <li>Choose a generation option</li>
+      <li>AI processes the image</li>
+      <li>Get a short video result</li>
+      <li>Repeat with other options</li>
+    </ol>
+  </div>
+</section>
 
-    <div class="grid md:grid-cols-3 gap-10 items-center">
-
-      <!-- BEFORE -->
-      <div class="relative aspect-square rounded-2xl overflow-hidden
-                  border border-purple-500/20 bg-black/40
-                  hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
-                  transition duration-500">
-
-        <img src="assets/before1.jpg"
-             class="w-full h-full object-cover">
-
-        <div class="absolute bottom-4 left-4 text-sm text-gray-300">
-          Исходное фото
-        </div>
+<section class="relative py-16 px-6 fade-in">
+  <div class="max-w-5xl mx-auto bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/10 p-8 md:p-10">
+    <h2 class="text-3xl font-bold mb-6">FAQ</h2>
+    <div class="space-y-6 text-gray-300">
+      <div>
+        <h3 class="text-xl font-semibold text-white">How long does it take?</h3>
+        <p>Текст ответа</p>
       </div>
-
-      <!-- BIG RESULT -->
-      <div class="relative aspect-[9/16] rounded-3xl overflow-hidden
-                  border border-purple-500/30
-                  hover:shadow-[0_0_70px_rgba(168,85,247,0.7)]
-                  transition duration-700">
-
-        <video autoplay muted loop playsinline
-               class="w-full h-full object-cover">
-          <source src="assets/after111.MP4" type="video/mp4">
-        </video>
-
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
-        <div class="absolute bottom-6 left-6 text-white">
-          <h3 class="text-xl font-semibold">AI Motion Generated</h3>
-        </div>
-
+      <div>
+        <h3 class="text-xl font-semibold text-white">Do you store uploaded data?</h3>
+        <p>Текст ответа</p>
       </div>
-
-      <!-- SMALL STACK -->
-      <div class="space-y-6">
-        <video autoplay muted loop playsinline
-               class="w-full aspect-square rounded-xl object-cover border border-purple-500/20"></video>
-
-        <video autoplay muted loop playsinline
-               class="w-full aspect-square rounded-xl object-cover border border-purple-500/20"></video>
+      <div>
+        <h3 class="text-xl font-semibold text-white">Can I use it on mobile?</h3>
+        <p>Текст ответа</p>
       </div>
-
     </div>
   </div>
 </section>
 
-
-
-<!-- FEATURES -->
-<section class="relative py-24 px-6 bg-transparent fade-in">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-    
-    <ul class="space-y-4 text-lg">
-      <li>🔥 Более 20 сценариев видео-генерации</li>
-      <li>🎭 Более 20 образов для фото</li>
-      <li>⚡ Быстрая AI-обработка</li>
-      <li>🔒 Приватно и анонимно</li>
-    </ul>
-
-    <div class="text-gray-300 space-y-4">
-      <p>Попробуй оживить фото понравившейся девушки прямо сейчас.</p>
-      <p>Мечтал о недоступной девушке? Мечты сбываются - yVeo AI.</p>
-      <p>Твои фантазии - под твоим контролем.</p>
-    </div>
-
-  </div>
-</section>
-  <!-- CTA AFTER FEATURES -->
-<section class="relative py-20 px-6 text-center fade-in">
-  <div class="max-w-3xl mx-auto space-y-8">
-
-    <h2 class="text-3xl md:text-4xl font-bold">
-      Готов попробовать прямо сейчас?
-    </h2>
-
+<section id="cta" class="relative py-20 px-6 text-center fade-in">
+  <div class="max-w-3xl mx-auto space-y-8 bg-black/40 backdrop-blur-md rounded-2xl border border-purple-500/10 p-8 md:p-10">
+    <h2 class="text-3xl md:text-4xl font-bold">Ready to try?</h2>
     <a href="https://t.me/yveo_online"
        class="glow inline-block bg-purple-600 hover:bg-purple-700 transition px-12 py-4 rounded-xl text-lg font-semibold">
-      Оживить фото в Telegram
+      Start in Telegram
     </a>
-
-    <p class="text-xs text-gray-400">
-      18+ • Приватно • Без регистрации
-    </p>
-
+    <p class="text-xs text-gray-400">Private • No account required</p>
   </div>
 </section>
 
-
-
-<!-- FOOTER -->
 <footer class="relative py-10 text-center text-sm text-gray-500">
   <p class="mb-2">© yVeo AI</p>
-  <a href="https://yveo.pro/terms" class="hover:text-purple-400 mx-2">Terms</a>
-  <a href="https://yveo.pro/refund_policy" class="hover:text-purple-400 mx-2">Refund Policy</a>
+  <a href="/terms" class="hover:text-purple-400 mx-2">Terms</a>
+  <a href="/refund_policy" class="hover:text-purple-400 mx-2">Refund Policy</a>
+  <a href="/privacy-policy" class="hover:text-purple-400 mx-2">Privacy Policy</a>
 </footer>
 
-<!-- JS -->
 <script>
-/* Parallax video */
-
-
-/* Fade in observer */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
 });
-
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
-<!-- LANGUAGE MODAL -->
-<div id="langModal"
-     class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm">
 
-  <div class="w-full max-w-lg mx-4 bg-gradient-to-b from-purple-900 to-purple-950
-              rounded-3xl p-8 relative border border-purple-500/20">
-
-    <!-- CLOSE -->
-    <button onclick="closeLang()"
-            class="absolute top-5 right-6 text-white text-2xl opacity-70 hover:opacity-100">
-      ✕
-    </button>
-
-    <h2 class="text-3xl font-bold mb-8">Language</h2>
-
-    <div class="space-y-4">
-
-      <button onclick="setLang('en')"
-        class="w-full flex items-center justify-between px-6 py-4
-               rounded-xl bg-purple-700/40 hover:bg-purple-700/60
-               transition text-lg">
-        <span>🇬🇧 English</span>
-      </button>
-
-      <button onclick="setLang('ru')"
-        class="w-full flex items-center justify-between px-6 py-4
-               rounded-xl bg-purple-700/20 hover:bg-purple-700/40
-               transition text-lg">
-        <span>🇷🇺 Русский</span>
-      </button>
-
-      <button onclick="setLang('zh')"
-        class="w-full flex items-center justify-between px-6 py-4
-               rounded-xl bg-purple-700/20 hover:bg-purple-700/40
-               transition text-lg">
-        <span>🇨🇳 中文</span>
-      </button>
-
-    </div>
-  </div>
-</div>
-<script>
 function openLang() {
   document.getElementById('langModal').classList.remove('hidden');
   document.getElementById('langModal').classList.add('flex');
 }
-
 function closeLang() {
   document.getElementById('langModal').classList.add('hidden');
   document.getElementById('langModal').classList.remove('flex');
 }
-
 function setLang(lang) {
   localStorage.setItem('lang', lang);
   closeLang();
-  alert('Language switched to: ' + lang);
+  // позже сделаем настоящую локализацию
 }
 </script>
 
+<div id="langModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+  <div class="w-full max-w-lg mx-4 bg-gradient-to-b from-purple-900 to-purple-950 rounded-3xl p-8 relative border border-purple-500/20">
+    <button onclick="closeLang()" class="absolute top-5 right-6 text-white text-2xl opacity-70 hover:opacity-100">✕</button>
+    <h2 class="text-3xl font-bold mb-8">Language</h2>
+    <div class="space-y-4">
+      <button onclick="setLang('en')" class="w-full flex items-center justify-between px-6 py-4 rounded-xl bg-purple-700/40 hover:bg-purple-700/60 transition text-lg"><span>🇬🇧 English</span></button>
+      <button onclick="setLang('ru')" class="w-full flex items-center justify-between px-6 py-4 rounded-xl bg-purple-700/20 hover:bg-purple-700/40 transition text-lg"><span>🇷🇺 Русский</span></button>
+      <button onclick="setLang('zh')" class="w-full flex items-center justify-between px-6 py-4 rounded-xl bg-purple-700/20 hover:bg-purple-700/40 transition text-lg"><span>🇨🇳 中文</span></button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
-
