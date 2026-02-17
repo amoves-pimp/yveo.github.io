@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Оживить фото в видео онлайн - нейросеть | YVEO AI</title>
-<meta name="description" content="Оживите фото в реалистичное видео с помощью нейросети. AI генерация видео по фото онлайн. Быстро и приватно.">
+<meta name="description" content="AI генерация видео по фото онлайн. Быстро, приватно, без регистрации.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -24,7 +24,16 @@ body{
 }
 .glow:hover{
   box-shadow:0 0 60px rgba(168,85,247,.9);
-  transform:translateY(-2px);
+  transform:translateY(-1px);
+}
+
+.model-btn{
+  border:2px solid rgba(168,85,247,.2);
+  transition:.25s;
+}
+.model-btn.active{
+  border-color:rgba(168,85,247,1);
+  box-shadow:0 0 25px rgba(168,85,247,.6);
 }
 
 .scenario-btn{
@@ -32,28 +41,15 @@ body{
   border-radius:14px;
   background:rgba(0,0,0,.35);
   border:1px solid rgba(168,85,247,.25);
-  text-align:left;
   font-weight:600;
   transition:.25s;
 }
 .scenario-btn:hover{
   border-color:rgba(168,85,247,.7);
-  box-shadow:0 0 25px rgba(168,85,247,.4);
 }
 .scenario-btn.active{
   border-color:rgba(168,85,247,1);
-  box-shadow:0 0 35px rgba(168,85,247,.7);
-}
-
-.model-btn{
-  transition:.3s;
-}
-.model-btn:hover{
-  box-shadow:0 0 25px rgba(168,85,247,.5);
-}
-.model-btn.active{
-  border-color:rgba(168,85,247,1);
-  box-shadow:0 0 30px rgba(168,85,247,.8);
+  box-shadow:0 0 25px rgba(168,85,247,.6);
 }
 </style>
 </head>
@@ -63,173 +59,146 @@ body{
 <!-- HEADER -->
 <header class="fixed top-0 left-0 w-full z-50 bg-black border-b border-purple-500/10">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="/" class="flex items-center gap-3">
+    <div class="flex items-center gap-3">
       <img src="assets/logo_3.png" class="w-10 h-10">
-      <span class="text-xl font-semibold uppercase">YVEO AI</span>
-    </a>
+      <span class="uppercase font-semibold text-white">YVEO AI</span>
+    </div>
 
     <a href="#cta"
-       class="px-6 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 transition glow">
-       Попробовать
+       class="px-6 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 glow">
+      Попробовать
     </a>
   </div>
 </header>
 
 <!-- VIDEO BG -->
-<video autoplay muted loop playsinline preload="auto"
+<video autoplay muted loop playsinline
 class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
 <source src="assets/yveo_background_loop1.mp4" type="video/mp4">
 </video>
+
 <div class="fixed inset-0 bg-black/40 -z-10"></div>
 
 <!-- HERO -->
-<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6">
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl">
-    Создать эротическое видео из фото с помощью нейросети
-  </h1>
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28">
+<h1 class="text-4xl md:text-6xl font-extrabold max-w-4xl mb-6">
+Создать видео из фото с помощью нейросети
+</h1>
 
-  <p class="text-gray-300 max-w-2xl mb-10 text-lg">
-    Загрузите изображение, выберите сценарий и получите видео всего за пару минут.
-  </p>
+<p class="text-gray-300 max-w-2xl mb-10">
+AI генерация видео по фото онлайн. Выберите модель, сценарий и получите результат за пару минут.
+</p>
 
-  <a href="https://t.me/yveo_online"
-     class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
-    Оживить фото сейчас
-  </a>
+<a href="#" class="glow bg-purple-600 px-10 py-4 rounded-xl">
+Оживить фото
+</a>
 </section>
 
-<!-- MODELS + SCENARIOS -->
-<section class="relative py-24 px-6">
-  <div class="max-w-6xl mx-auto">
+<!-- SCENARIO SECTION -->
+<section class="py-24 px-6">
+<div class="max-w-6xl mx-auto">
 
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-      Примеры генерации
-    </h2>
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+Примеры генерации
+</h2>
 
-    <div class="grid md:grid-cols-2 gap-12 items-start">
+<div class="grid md:grid-cols-2 gap-10 items-start">
 
-  <!-- LEFT SIDE (VIDEO + MODELS) -->
-  <div class="flex flex-col items-center">
+<!-- LEFT SIDE -->
+<div class="flex flex-col items-center">
 
-    <!-- MODELS -->
-    <div class="flex gap-4 mb-6 order-1 md:order-2">
-
-      <div onclick="changeModel(1,this)"
-           class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/40">
-        <img src="assets/model1.jpg" class="w-full h-full object-cover">
-      </div>
-
-      <div onclick="changeModel(2,this)"
-           class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/20">
-        <img src="assets/model2.jpg" class="w-full h-full object-cover">
-      </div>
-
-      <div onclick="changeModel(3,this)"
-           class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/20">
-        <img src="assets/model3.jpg" class="w-full h-full object-cover">
-      </div>
-
-    </div>
-
-    <!-- VIDEO -->
-    <div class="relative w-full max-w-xs aspect-[9/16] rounded-2xl overflow-hidden
-                bg-black/40 border border-purple-500/20
-                shadow-[0_0_40px_rgba(168,85,247,0.35)]
-                order-2 md:order-1">
-
-      <video id="scenarioVideo"
-             autoplay
-             muted
-             loop
-             playsinline
-             preload="auto"
-             class="w-full h-full object-cover">
-        <source src="assets/model1_s1.mp4" type="video/mp4">
-      </video>
-
-    </div>
-
+<!-- MODELS (mobile top) -->
+<div class="flex gap-4 mb-6 md:hidden">
+  <div onclick="changeModel(1,this)" class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+    <img src="assets/model1.jpg" class="w-full h-full object-cover">
   </div>
-
-
-        <!-- MODELS -->
-        <div class="flex gap-4 mt-6">
-
-          <div onclick="changeModel(1,this)"
-               class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/40">
-            <img src="assets/model1.jpg" class="w-full h-full object-cover">
-          </div>
-
-          <div onclick="changeModel(2,this)"
-               class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/20">
-            <img src="assets/model2.jpg" class="w-full h-full object-cover">
-          </div>
-
-          <div onclick="changeModel(3,this)"
-               class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer border border-purple-500/20">
-            <img src="assets/model3.jpg" class="w-full h-full object-cover">
-          </div>
-
-        </div>
-      </div>
-
-      <!-- SCENARIOS -->
-      <div class="flex flex-col gap-4">
-
-        <button onclick="changeScenario(1,this)" class="scenario-btn active">Blowjob</button>
-        <button onclick="changeScenario(2,this)" class="scenario-btn">Doggy</button>
-        <button onclick="changeScenario(3,this)" class="scenario-btn">Missionary</button>
-        <button onclick="changeScenario(4,this)" class="scenario-btn">POV</button>
-        <button onclick="changeScenario(5,this)" class="scenario-btn">Double</button>
-
-      </div>
-
-    </div>
+  <div onclick="changeModel(2,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+    <img src="assets/model2.jpg" class="w-full h-full object-cover">
   </div>
+  <div onclick="changeModel(3,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+    <img src="assets/model3.jpg" class="w-full h-full object-cover">
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div class="relative w-full max-w-xs aspect-[9/16] rounded-2xl overflow-hidden border border-purple-500/20">
+<video id="scenarioVideo"
+autoplay muted loop playsinline preload="auto"
+class="w-full h-full object-cover">
+<source src="assets/model1_s1.mp4" type="video/mp4">
+</video>
+</div>
+
+<!-- MODELS (desktop bottom) -->
+<div class="hidden md:flex gap-4 mt-6">
+  <div onclick="changeModel(1,this)" class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+    <img src="assets/model1.jpg" class="w-full h-full object-cover">
+  </div>
+  <div onclick="changeModel(2,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+    <img src="assets/model2.jpg" class="w-full h-full object-cover">
+  </div>
+  <div onclick="changeModel(3,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
+    <img src="assets/model3.jpg" class="w-full h-full object-cover">
+  </div>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="flex flex-col gap-3">
+
+<button onclick="changeScenario(1,this)" class="scenario-btn active">Blowjob</button>
+<button onclick="changeScenario(2,this)" class="scenario-btn">Doggy</button>
+<button onclick="changeScenario(3,this)" class="scenario-btn">Missionary</button>
+<button onclick="changeScenario(4,this)" class="scenario-btn">Doggy POV</button>
+<button onclick="changeScenario(5,this)" class="scenario-btn">Double</button>
+
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- CTA -->
-<section id="cta" class="relative py-24 px-6 text-center">
-  <h2 class="text-4xl font-bold mb-8">
-    Попробуйте прямо сейчас
-  </h2>
-
-  <a href="https://t.me/yveo_online"
-     class="glow bg-purple-600 px-12 py-5 rounded-xl text-lg font-semibold">
-     Перейти к генерации
-  </a>
+<section id="cta" class="py-24 text-center">
+<h2 class="text-3xl font-bold mb-6">
+Попробуйте прямо сейчас
+</h2>
+<a href="#" class="glow bg-purple-600 px-12 py-5 rounded-xl">
+Перейти к генерации
+</a>
 </section>
 
-<!-- FOOTER -->
-<footer class="relative py-10 text-center text-sm text-gray-500">
-  © YVEO AI
-</footer>
-
+<!-- SCRIPT -->
 <script>
 let currentModel = 1;
 let currentScenario = 1;
 
 function changeModel(model, el){
-  currentModel = model;
-  document.querySelectorAll('.model-btn').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active');
-  updateVideo();
+currentModel = model;
+
+document.querySelectorAll('.model-btn')
+.forEach(btn => btn.classList.remove('active'));
+el.classList.add('active');
+
+updateVideo();
 }
 
 function changeScenario(scenario, el){
-  currentScenario = scenario;
-  document.querySelectorAll('.scenario-btn').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active');
-  updateVideo();
+currentScenario = scenario;
+
+document.querySelectorAll('.scenario-btn')
+.forEach(btn => btn.classList.remove('active'));
+el.classList.add('active');
+
+updateVideo();
 }
 
 function updateVideo(){
-  const video = document.getElementById('scenarioVideo');
-  const newSrc = `assets/model${currentModel}_s${currentScenario}.mp4`;
-  video.pause();
-  video.src = newSrc;
-  video.load();
-  video.play().catch(()=>{});
+const video = document.getElementById('scenarioVideo');
+video.src = `assets/model${currentModel}_s${currentScenario}.mp4`;
+video.load();
+video.play();
 }
 </script>
 
