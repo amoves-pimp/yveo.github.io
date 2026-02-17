@@ -35,6 +35,26 @@
     #bgVideo {
       transform: none !important;
     }
+    .scenario-btn {
+  padding: 14px 20px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(168,85,247,0.25);
+  text-align: left;
+  font-weight: 600;
+  transition: all .25s ease;
+}
+
+.scenario-btn:hover {
+  border-color: rgba(168,85,247,0.7);
+  box-shadow: 0 0 25px rgba(168,85,247,0.4);
+}
+
+.scenario-btn.active {
+  border-color: rgba(168,85,247,1);
+  box-shadow: 0 0 35px rgba(168,85,247,0.7);
+}
+
   </style>
 </head>
 
@@ -130,58 +150,65 @@
       Как это работает? 
     </h2>
 
-    <!-- MAIN VIDEO -->
-    <div class="mb-12">
-      <div class="rounded-3xl overflow-hidden border border-purple-500/20
-                  bg-black/40 backdrop-blur-md
-                  hover:shadow-[0_0_60px_rgba(168,85,247,0.6)]
-                  transition duration-500">
+    <!-- SCENARIOS DEMO -->
+<section class="relative py-24 px-6">
+  <div class="max-w-6xl mx-auto">
 
-        <video id="mainVideo" autoplay muted loop playsinline
-               class="w-full h-full object-cover">
-          <source src="assets/scenario1.mp4" type="video/mp4">
-        </video>
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+      Примеры сценариев генерации
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+
+      <!-- DEMO VIDEO -->
+      <div class="w-full flex justify-center">
+        <div class="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden
+                    bg-black/40 border border-purple-500/20
+                    shadow-[0_0_40px_rgba(168,85,247,0.35)]">
+
+          <video id="scenarioVideo"
+                 controls
+                 playsinline
+                 class="w-full h-full object-cover">
+            <source src="assets/scenario1.mp4" type="video/mp4">
+          </video>
+
+        </div>
+      </div>
+
+      <!-- SCENARIO BUTTONS -->
+      <div class="flex flex-col gap-3">
+
+        <button onclick="changeVideo('assets/scenario1.mp4', this)"
+          class="scenario-btn">
+          Blowjob
+        </button>
+
+        <button onclick="changeVideo('assets/scenario2.mp4', this)"
+          class="scenario-btn">
+          Doggy
+        </button>
+
+        <button onclick="changeVideo('assets/scenrio3.mp4', this)">
+          Missionary
+        </button>
+
+        <button onclick="changeVideo('assets/scenario4.mp4', this)"
+          class="scenario-btn">
+          Doggy POV
+        </button>
+
+        <button onclick="changeVideo('assets/scenario5.mp4', this)"
+          class="scenario-btn">
+          Double
+        </button>
 
       </div>
+
     </div>
-
-    <!-- SCENARIO GRID -->
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div onclick="changeVideo('assets/scenario1.mp4', this)"
-           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
-        <h3 class="font-semibold">Blowjob</h3>
-      </div>
-
-      <div onclick="changeVideo('assets/scenario2.mp4', this)"
-           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
-        <h3 class="font-semibold">Doggy</h3>
-      </div>
-
-      <div onclick="changeVideo('assets/scenrio3.mp4', this)"
-           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
-        <h3 class="font-semibold">Missionary</h3>
-      </div>
-
-      <div onclick="changeVideo('assets/scenario4.mp4', this)"
-           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
-        <h3 class="font-semibold">Doggy POV</h3>
-      </div>
-
-      <div onclick="changeVideo('assets/scenario5.mp4', this)"
-           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
-        <h3 class="font-semibold">Double</h3>
-      </div>
-
-      <div onclick="changeVideo('assets/scenario6.mp4', this)"
-           class="scenario-card cursor-pointer p-6 rounded-2xl bg-black/40 backdrop-blur-md border border-purple-500/20 hover:border-purple-500 transition">
-        <h3 class="font-semibold">Orgasm</h3>
-      </div>
-
-    </div>
-
   </div>
 </section>
+
 
 
 <!-- HOW IT WORKS -->
@@ -230,21 +257,22 @@
   <p class="mb-2">© yVeo AI</p>
   <a href="/terms" class="hover:text-purple-400 mx-2">Пользовательское соглашение</a>
   <a href="/refund_policy" class="hover:text-purple-400 mx-2">Политика возврата</a>
-</footer>
 <script>
-function changeVideo(src, element) {
-  const video = document.getElementById("mainVideo");
+function changeVideo(src, el) {
+  const video = document.getElementById('scenarioVideo');
+
+  video.pause();
   video.src = src;
   video.load();
   video.play();
 
-  document.querySelectorAll(".scenario-card").forEach(card => {
-    card.classList.remove("border-purple-500");
-  });
+  document.querySelectorAll('.scenario-btn')
+    .forEach(btn => btn.classList.remove('active'));
 
-  element.classList.add("border-purple-500");
+  el.classList.add('active');
 }
 </script>
+
 
 </body>
 </html>
