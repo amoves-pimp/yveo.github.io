@@ -102,62 +102,88 @@ AI генерация видео по фото онлайн. Выберите м
 Примеры генерации
 </h2>
 
-<div class="grid md:grid-cols-2 gap-10 items-start">
+<div class="grid md:grid-cols-2 gap-12 items-start">
 
-<!-- LEFT SIDE -->
-<div class="flex flex-col items-center">
+<!-- LEFT: VIDEO -->
+<div class="flex justify-center">
+  <div class="relative w-full max-w-xs md:max-w-sm aspect-[9/16]
+              rounded-2xl overflow-hidden
+              border border-purple-500/20
+              shadow-[0_0_40px_rgba(168,85,247,0.35)]">
 
-<!-- MODELS (mobile top) -->
-<div class="flex gap-4 mb-6 md:hidden">
-  <div onclick="changeModel(1,this)" class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
-    <img src="assets/model1.jpg" class="w-full h-full object-cover">
-  </div>
-  <div onclick="changeModel(2,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
-    <img src="assets/model2.jpg" class="w-full h-full object-cover">
-  </div>
-  <div onclick="changeModel(3,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
-    <img src="assets/model3.jpg" class="w-full h-full object-cover">
-  </div>
-</div>
+    <video id="scenarioVideo"
+           autoplay muted loop playsinline preload="auto"
+           class="w-full h-full object-cover">
+      <source src="assets/model1_s1.mp4" type="video/mp4">
+    </video>
 
-<!-- VIDEO -->
-<div class="relative w-full max-w-xs aspect-[9/16] rounded-2xl overflow-hidden border border-purple-500/20">
-<video id="scenarioVideo"
-autoplay muted loop playsinline preload="auto"
-class="w-full h-full object-cover">
-<source src="assets/model1_s1.mp4" type="video/mp4">
-</video>
-</div>
-
-<!-- MODELS (desktop bottom) -->
-<div class="hidden md:flex gap-4 mt-6">
-  <div onclick="changeModel(1,this)" class="model-btn active w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
-    <img src="assets/model1.jpg" class="w-full h-full object-cover">
   </div>
-  <div onclick="changeModel(2,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
-    <img src="assets/model2.jpg" class="w-full h-full object-cover">
-  </div>
-  <div onclick="changeModel(3,this)" class="model-btn w-20 h-20 rounded-xl overflow-hidden cursor-pointer">
-    <img src="assets/model3.jpg" class="w-full h-full object-cover">
-  </div>
-</div>
-
 </div>
 
 <!-- RIGHT SIDE -->
-<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-8">
 
-<button onclick="changeScenario(1,this)" class="scenario-btn active">Blowjob</button>
-<button onclick="changeScenario(2,this)" class="scenario-btn">Doggy</button>
-<button onclick="changeScenario(3,this)" class="scenario-btn">Missionary</button>
-<button onclick="changeScenario(4,this)" class="scenario-btn">Doggy POV</button>
-<button onclick="changeScenario(5,this)" class="scenario-btn">Double</button>
+  <!-- MODELS (PC сверху, мобилка уже работает) -->
+  <div class="flex justify-start gap-4">
+
+    <div onclick="changeModel(1,this)"
+         class="model-btn active w-16 h-16 md:w-20 md:h-20
+                rounded-xl overflow-hidden cursor-pointer">
+      <img src="assets/model1.jpg"
+           class="w-full h-full object-cover">
+    </div>
+
+    <div onclick="changeModel(2,this)"
+         class="model-btn w-16 h-16 md:w-20 md:h-20
+                rounded-xl overflow-hidden cursor-pointer">
+      <img src="assets/model2.jpg"
+           class="w-full h-full object-cover">
+    </div>
+
+    <div onclick="changeModel(3,this)"
+         class="model-btn w-16 h-16 md:w-20 md:h-20
+                rounded-xl overflow-hidden cursor-pointer">
+      <img src="assets/model3.jpg"
+           class="w-full h-full object-cover">
+    </div>
+
+  </div>
+
+  <!-- SCENARIOS -->
+  <div class="flex flex-col gap-3">
+
+    <button onclick="changeScenario(1,this)"
+      class="scenario-btn active">
+      Blowjob
+    </button>
+
+    <button onclick="changeScenario(2,this)"
+      class="scenario-btn">
+      Doggy
+    </button>
+
+    <button onclick="changeScenario(3,this)"
+      class="scenario-btn">
+      Missionary
+    </button>
+
+    <button onclick="changeScenario(4,this)"
+      class="scenario-btn">
+      Doggy POV
+    </button>
+
+    <button onclick="changeScenario(5,this)"
+      class="scenario-btn">
+      Double
+    </button>
+
+  </div>
 
 </div>
-
 </div>
 </div>
 </section>
+
 
 <!-- CTA -->
 <section id="cta" class="py-24 text-center">
