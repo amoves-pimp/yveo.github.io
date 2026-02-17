@@ -1,62 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Оживить фото в видео онлайн - нейросеть для генерации видео | yVeo AI</title>
-  <meta name="description" content="Оживите фото в реалистичное видео с помощью нейросети. AI генерация видео по фото онлайн. Быстро, приватно, без регистрации.">
-  <meta name="robots" content="index, follow">
+<title>Оживить фото в видео онлайн - нейросеть для генерации видео | yVEO AI</title>
+<meta name="description" content="Оживите фото в реалистичное видео с помощью нейросети. AI генерация видео по фото онлайн. Быстро, приватно, без регистрации.">
+<meta name="robots" content="index, follow">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
+.glow {
+  box-shadow:0 0 30px rgba(168,85,247,0.6);
+  transition:.3s ease;
+}
+.glow:hover {
+  box-shadow:0 0 60px rgba(168,85,247,0.9);
+  transform:translateY(-1px);
+}
 
-    .glow {
-      box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
-      transition: all 0.3s ease;
-    }
-
-    .glow:hover {
-      box-shadow: 0 0 60px rgba(168, 85, 247, 0.9);
-      transform: translateY(-1px);
-    }
-
-    #bgVideo {
-      transform: none !important;
-    }
-
-    .scenario-btn {
-      padding: 14px 20px;
-      border-radius: 14px;
-      background: rgba(0,0,0,0.35);
-      border: 1px solid rgba(168,85,247,0.25);
-      text-align: left;
-      font-weight: 600;
-      transition: all .25s ease;
-      cursor: pointer;
-    }
-
-    .scenario-btn:hover {
-      border-color: rgba(168,85,247,0.7);
-      box-shadow: 0 0 25px rgba(168,85,247,0.4);
-    }
-
-    .scenario-btn.active {
-      border-color: rgba(168,85,247,1);
-      box-shadow: 0 0 35px rgba(168,85,247,0.7);
-    }
-  </style>
+.scenario-btn {
+  padding:12px 18px;
+  border-radius:14px;
+  background:rgba(0,0,0,0.35);
+  border:1px solid rgba(168,85,247,0.25);
+  font-weight:600;
+  text-align:left;
+  transition:.25s ease;
+}
+.scenario-btn:hover {
+  border-color:rgba(168,85,247,0.7);
+  box-shadow:0 0 25px rgba(168,85,247,0.4);
+}
+.scenario-btn.active {
+  border-color:rgba(168,85,247,1);
+  box-shadow:0 0 35px rgba(168,85,247,0.7);
+}
+</style>
 </head>
 
 <body>
@@ -65,7 +54,7 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-black border-b border-purple-500/10">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3">
-      <img src="assets/logo_3.png" class="w-10 h-10 object-contain" alt="yVeo AI">
+      <img src="assets/logo_3.png" class="w-10 h-10 object-contain">
       <span class="text-xl font-semibold tracking-wide text-white uppercase">
         YVEO AI
       </span>
@@ -96,51 +85,14 @@
   </h1>
 
   <p class="text-gray-300 max-w-2xl mb-10 text-lg">
-    yVeo AI — это нейросеть нового поколения для реалистичной анимации фото.
-    Загрузите изображение, выберите сценарий и получите видео всего за пару минут.
+    yVEO AI — нейросеть для реалистичной анимации фото.
+    Выберите сценарий и получите видео всего за пару минут.
   </p>
 
   <a href="https://t.me/yveo_online"
      class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
     Оживить фото сейчас
   </a>
-
-  <p class="text-xs text-gray-400 mt-4">
-    Онлайн • Без регистрации • Быстрая обработка
-  </p>
-</section>
-
-<!-- SEO TEXT -->
-<section class="relative py-24 px-6">
-  <div class="max-w-5xl mx-auto bg-black/40 backdrop-blur-md p-12 rounded-3xl border border-purple-500/10">
-
-    <h2 class="text-3xl font-bold mb-6">
-      Как работает нейросеть для оживления фото
-    </h2>
-
-    <p class="text-gray-300 mb-6 leading-relaxed">
-      Современные технологии искусственного интеллекта позволяют создавать видео по фото онлайн.
-      Нейросеть анализирует изображение, распознаёт лицо и позу,
-      после чего генерирует реалистичную анимацию.
-    </p>
-
-    <p class="text-gray-300 mb-6 leading-relaxed">
-      AI генерация видео по фото не требует установки программ —
-      весь процесс проходит онлайн и полностью автоматизирован.
-    </p>
-
-    <h3 class="text-2xl font-semibold mb-4 mt-8">
-      Преимущества генерации видео из фото
-    </h3>
-
-    <ul class="space-y-3 text-gray-300">
-      <li>— Быстрая обработка изображения</li>
-      <li>— Реалистичная анимация движений</li>
-      <li>— Онлайн-формат без установки ПО</li>
-      <li>— Мгновенный результат</li>
-    </ul>
-
-  </div>
 </section>
 
 <!-- SCENARIOS -->
@@ -153,13 +105,18 @@
 
     <div class="grid md:grid-cols-2 gap-10 items-center">
 
-      <!-- VIDEO -->
+      <!-- VIDEO DEMO -->
       <div class="flex justify-center">
-        <div class="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden
+        <div class="relative w-full max-w-xs aspect-[9/16] rounded-2xl overflow-hidden
                     bg-black/40 border border-purple-500/20
                     shadow-[0_0_40px_rgba(168,85,247,0.35)]">
 
-          <video id="scenarioVideo" controls playsinline
+          <video id="scenarioVideo"
+                 autoplay
+                 muted
+                 loop
+                 playsinline
+                 preload="auto"
                  class="w-full h-full object-cover">
             <source src="assets/scenario1.mp4" type="video/mp4">
           </video>
@@ -170,28 +127,28 @@
       <!-- BUTTONS -->
       <div class="flex flex-col gap-3">
 
-        <button class="scenario-btn active"
-                onclick="changeVideo('assets/scenario1.mp4', this)">
+        <button onclick="changeVideo('assets/scenario1.mp4', this)"
+                class="scenario-btn active">
           Blowjob
         </button>
 
-        <button class="scenario-btn"
-                onclick="changeVideo('assets/scenario2.mp4', this)">
+        <button onclick="changeVideo('assets/scenario2.mp4', this)"
+                class="scenario-btn">
           Doggy
         </button>
 
-        <button class="scenario-btn"
-                onclick="changeVideo('assets/scenrio3.mp4', this)">
+        <button onclick="changeVideo('assets/scenrio3.mp4', this)"
+                class="scenario-btn">
           Missionary
         </button>
 
-        <button class="scenario-btn"
-                onclick="changeVideo('assets/scenario4.mp4', this)">
+        <button onclick="changeVideo('assets/scenario4.mp4', this)"
+                class="scenario-btn">
           Doggy POV
         </button>
 
-        <button class="scenario-btn"
-                onclick="changeVideo('assets/scenario5.mp4', this)">
+        <button onclick="changeVideo('assets/scenario5.mp4', this)"
+                class="scenario-btn">
           Double
         </button>
 
@@ -201,39 +158,10 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="relative py-24 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-
-    <h2 class="text-3xl font-bold mb-12">
-      Как оживить фото онлайн
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-8 text-gray-300">
-
-      <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-purple-500/10">
-        <h3 class="text-xl font-semibold mb-4">1. Загрузите фото</h3>
-        <p>Выберите изображение для обработки.</p>
-      </div>
-
-      <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-purple-500/10">
-        <h3 class="text-xl font-semibold mb-4">2. Выберите сценарий</h3>
-        <p>Определите стиль и тип анимации.</p>
-      </div>
-
-      <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-purple-500/10">
-        <h3 class="text-xl font-semibold mb-4">3. Получите видео</h3>
-        <p>AI создаст видеоролик автоматически.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section id="cta" class="relative py-24 px-6 text-center">
   <h2 class="text-4xl font-bold mb-8">
-    Попробуйте создать видео из фото прямо сейчас
+    Попробуйте прямо сейчас
   </h2>
 
   <a href="https://t.me/yveo_online"
@@ -244,7 +172,7 @@
 
 <!-- FOOTER -->
 <footer class="relative py-10 text-center text-sm text-gray-500">
-  <p class="mb-2">© yVeo AI</p>
+  <p class="mb-2">© yVEO AI</p>
   <a href="/terms" class="hover:text-purple-400 mx-2">Пользовательское соглашение</a>
   <a href="/refund_policy" class="hover:text-purple-400 mx-2">Политика возврата</a>
 </footer>
@@ -253,8 +181,15 @@
 function changeVideo(src, el) {
   const video = document.getElementById('scenarioVideo');
 
-  video.src = src;
+  video.pause();
+  video.setAttribute('src', src);
   video.load();
+
+  // принудительный автозапуск (Safari fix)
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {});
+  }
 
   document.querySelectorAll('.scenario-btn')
     .forEach(btn => btn.classList.remove('active'));
