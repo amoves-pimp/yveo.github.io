@@ -35,26 +35,27 @@
     #bgVideo {
       transform: none !important;
     }
+
     .scenario-btn {
-  padding: 14px 20px;
-  border-radius: 14px;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(168,85,247,0.25);
-  text-align: left;
-  font-weight: 600;
-  transition: all .25s ease;
-}
+      padding: 14px 20px;
+      border-radius: 14px;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(168,85,247,0.25);
+      text-align: left;
+      font-weight: 600;
+      transition: all .25s ease;
+      cursor: pointer;
+    }
 
-.scenario-btn:hover {
-  border-color: rgba(168,85,247,0.7);
-  box-shadow: 0 0 25px rgba(168,85,247,0.4);
-}
+    .scenario-btn:hover {
+      border-color: rgba(168,85,247,0.7);
+      box-shadow: 0 0 25px rgba(168,85,247,0.4);
+    }
 
-.scenario-btn.active {
-  border-color: rgba(168,85,247,1);
-  box-shadow: 0 0 35px rgba(168,85,247,0.7);
-}
-
+    .scenario-btn.active {
+      border-color: rgba(168,85,247,1);
+      box-shadow: 0 0 35px rgba(168,85,247,0.7);
+    }
   </style>
 </head>
 
@@ -64,11 +65,10 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-black border-b border-purple-500/10">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3">
-      <img src="assets/logo_3.png" class="w-10 h-10 object-contain">
+      <img src="assets/logo_3.png" class="w-10 h-10 object-contain" alt="yVeo AI">
       <span class="text-xl font-semibold tracking-wide text-white uppercase">
-  YVEO AI
+        YVEO AI
       </span>
-
     </a>
 
     <a href="#cta"
@@ -110,7 +110,7 @@
   </p>
 </section>
 
-<!-- SEO TEXT BLOCK -->
+<!-- SEO TEXT -->
 <section class="relative py-24 px-6">
   <div class="max-w-5xl mx-auto bg-black/40 backdrop-blur-md p-12 rounded-3xl border border-purple-500/10">
 
@@ -120,14 +120,13 @@
 
     <p class="text-gray-300 mb-6 leading-relaxed">
       Современные технологии искусственного интеллекта позволяют создавать видео по фото онлайн.
-      Нейросеть анализирует изображение, распознаёт лицо, позу и структуру тела,
-      после чего генерирует плавную анимацию на основе заданного сценария.
+      Нейросеть анализирует изображение, распознаёт лицо и позу,
+      после чего генерирует реалистичную анимацию.
     </p>
 
     <p class="text-gray-300 mb-6 leading-relaxed">
-      AI генерация видео по фото подходит для создания эффектных визуальных материалов,
-      креативных роликов и анимации портретов. Процесс полностью автоматизирован
-      и не требует специальных навыков или установки программ.
+      AI генерация видео по фото не требует установки программ —
+      весь процесс проходит онлайн и полностью автоматизирован.
     </p>
 
     <h3 class="text-2xl font-semibold mb-4 mt-8">
@@ -138,19 +137,13 @@
       <li>— Быстрая обработка изображения</li>
       <li>— Реалистичная анимация движений</li>
       <li>— Онлайн-формат без установки ПО</li>
-      <li>— Простая загрузка и мгновенный результат</li>
+      <li>— Мгновенный результат</li>
     </ul>
 
   </div>
 </section>
-  <section class="relative py-24 px-6">
-  <div class="max-w-6xl mx-auto">
 
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-      Как это работает? 
-    </h2>
-
-    <!-- SCENARIOS DEMO -->
+<!-- SCENARIOS -->
 <section class="relative py-24 px-6">
   <div class="max-w-6xl mx-auto">
 
@@ -160,15 +153,13 @@
 
     <div class="grid md:grid-cols-2 gap-10 items-center">
 
-      <!-- DEMO VIDEO -->
-      <div class="w-full flex justify-center">
+      <!-- VIDEO -->
+      <div class="flex justify-center">
         <div class="relative w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden
                     bg-black/40 border border-purple-500/20
                     shadow-[0_0_40px_rgba(168,85,247,0.35)]">
 
-          <video id="scenarioVideo"
-                 controls
-                 playsinline
+          <video id="scenarioVideo" controls playsinline
                  class="w-full h-full object-cover">
             <source src="assets/scenario1.mp4" type="video/mp4">
           </video>
@@ -176,30 +167,31 @@
         </div>
       </div>
 
-      <!-- SCENARIO BUTTONS -->
+      <!-- BUTTONS -->
       <div class="flex flex-col gap-3">
 
-        <button onclick="changeVideo('assets/scenario1.mp4', this)"
-          class="scenario-btn">
+        <button class="scenario-btn active"
+                onclick="changeVideo('assets/scenario1.mp4', this)">
           Blowjob
         </button>
 
-        <button onclick="changeVideo('assets/scenario2.mp4', this)"
-          class="scenario-btn">
+        <button class="scenario-btn"
+                onclick="changeVideo('assets/scenario2.mp4', this)">
           Doggy
         </button>
 
-        <button onclick="changeVideo('assets/scenrio3.mp4', this)">
+        <button class="scenario-btn"
+                onclick="changeVideo('assets/scenrio3.mp4', this)">
           Missionary
         </button>
 
-        <button onclick="changeVideo('assets/scenario4.mp4', this)"
-          class="scenario-btn">
+        <button class="scenario-btn"
+                onclick="changeVideo('assets/scenario4.mp4', this)">
           Doggy POV
         </button>
 
-        <button onclick="changeVideo('assets/scenario5.mp4', this)"
-          class="scenario-btn">
+        <button class="scenario-btn"
+                onclick="changeVideo('assets/scenario5.mp4', this)">
           Double
         </button>
 
@@ -208,8 +200,6 @@
     </div>
   </div>
 </section>
-
-
 
 <!-- HOW IT WORKS -->
 <section class="relative py-24 px-6">
@@ -233,7 +223,7 @@
 
       <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-purple-500/10">
         <h3 class="text-xl font-semibold mb-4">3. Получите видео</h3>
-        <p>AI создаст готовый видеоролик автоматически.</p>
+        <p>AI создаст видеоролик автоматически.</p>
       </div>
 
     </div>
@@ -257,6 +247,8 @@
   <p class="mb-2">© yVeo AI</p>
   <a href="/terms" class="hover:text-purple-400 mx-2">Пользовательское соглашение</a>
   <a href="/refund_policy" class="hover:text-purple-400 mx-2">Политика возврата</a>
+</footer>
+
 <script>
 function changeVideo(src, el) {
   const video = document.getElementById('scenarioVideo');
@@ -273,6 +265,6 @@ function changeVideo(src, el) {
 }
 </script>
 
-
 </body>
 </html>
+
