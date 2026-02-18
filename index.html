@@ -44,6 +44,9 @@ body {
   border: 2px solid rgba(168,85,247,0.2);
   transition: .25s;
 }
+.model-thumb:hover {
+  box-shadow: 0 0 20px rgba(168,85,247,0.4);
+}
 .model-thumb.active {
   border-color: rgba(168,85,247,1);
   box-shadow: 0 0 25px rgba(168,85,247,0.8);
@@ -57,30 +60,13 @@ body {
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/20">
   <div class="max-w-6xl mx-auto px-6 py-4 relative flex items-center">
 
-    <!-- CENTER MENU -->
     <nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-sm font-medium text-gray-200">
-      <a href="/neural-network-18plus"
-         class="hover:text-white transition">
-        Нейросеть 18+
-      </a>
-
-      <a href="/video-generation"
-         class="hover:text-white transition">
-        Видео генерация
-      </a>
-
-      <a href="/photo-animation"
-         class="hover:text-white transition">
-        Анимация фото
-      </a>
-
-      <a href="/faq"
-         class="hover:text-white transition">
-        FAQ
-      </a>
+      <a href="/neural-network-18plus" class="hover:text-white transition">Нейросеть 18+</a>
+      <a href="/video-generation" class="hover:text-white transition">Видео генерация</a>
+      <a href="/photo-animation" class="hover:text-white transition">Анимация фото</a>
+      <a href="/faq" class="hover:text-white transition">FAQ</a>
     </nav>
 
-    <!-- RIGHT CTA -->
     <div class="ml-auto">
       <a href="https://t.me/yveo_online"
          class="px-6 py-2 rounded-xl bg-purple-600 glow text-sm font-semibold">
@@ -91,28 +77,33 @@ body {
   </div>
 </header>
 
-
 <!-- BACKGROUND -->
-<video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
+<video autoplay muted loop playsinline preload="none"
+       class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
   <source src="assets/yveo_background_loop1.mp4" type="video/mp4">
 </video>
 <div class="fixed inset-0 bg-black/40 -z-10"></div>
 
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-36">
+
   <img src="assets/logo_2.png"
-     alt="YVEO AI"
-     class="w-36 md:w-52 mb-8 select-none pointer-events-none">
+       alt="YVEO AI"
+       class="w-36 md:w-52 mb-8 drop-shadow-[0_0_25px_rgba(168,85,247,0.5)] select-none pointer-events-none">
 
   <h1 class="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl">
     Создать эротическое видео из фото с помощью нейросети
   </h1>
+
   <p class="text-gray-300 max-w-2xl mb-10">
     Загрузите фото, выберите модель и сценарий — получите готовое видео за минуту.
   </p>
-  <a href="https://t.me/yveo_online" class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
-    Оживить фото сейчас
+
+  <a href="https://t.me/yveo_online"
+     class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
+     Оживить фото сейчас
   </a>
+
 </section>
 
 <!-- DEMO SECTION -->
@@ -125,7 +116,7 @@ body {
 
 <div class="grid md:grid-cols-2 gap-10 items-start">
 
-  <!-- LEFT: VIDEO -->
+  <!-- VIDEO -->
   <div class="flex justify-center">
     <div class="relative w-full max-w-xs md:max-w-sm aspect-[9/16] rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_rgba(168,85,247,0.35)]">
       <video id="demoVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
@@ -134,17 +125,17 @@ body {
     </div>
   </div>
 
-  <!-- RIGHT: CONTROLS -->
+  <!-- CONTROLS -->
   <div class="flex flex-col gap-6">
 
     <!-- MODELS -->
-    <div class="order-1 md:order-none flex justify-center md:justify-start gap-4">
+    <div class="flex justify-center md:justify-start gap-6">
       <img src="assets/model1.jpg" onclick="changeModel(1,this)"
-           class="model-thumb active w-20 h-20 rounded-xl object-cover cursor-pointer">
+           class="model-thumb active w-28 md:w-32 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
       <img src="assets/model2.jpg" onclick="changeModel(2,this)"
-           class="model-thumb w-20 h-20 rounded-xl object-cover cursor-pointer">
+           class="model-thumb w-28 md:w-32 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
       <img src="assets/model3.jpg" onclick="changeModel(3,this)"
-           class="model-thumb w-20 h-20 rounded-xl object-cover cursor-pointer">
+           class="model-thumb w-28 md:w-32 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
     </div>
 
     <!-- SCENARIOS -->
@@ -186,7 +177,8 @@ body {
 <!-- CTA -->
 <section id="cta" class="py-24 text-center">
 <h2 class="text-4xl font-bold mb-8">Попробуйте прямо сейчас</h2>
-<a href="https://t.me/yveo_online" class="glow bg-purple-600 px-12 py-5 rounded-xl text-lg font-semibold">
+<a href="https://t.me/yveo_online"
+   class="glow bg-purple-600 px-12 py-5 rounded-xl text-lg font-semibold">
 Перейти к генерации
 </a>
 </section>
@@ -223,6 +215,7 @@ function updateVideo() {
 
 </body>
 </html>
+
 
 
 
