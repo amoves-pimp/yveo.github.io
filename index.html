@@ -18,38 +18,47 @@ body {
   overflow-x: hidden;
 }
 
-.glow {
-  box-shadow: 0 0 30px rgba(168,85,247,0.6);
-  transition: .3s;
+/* CTA gradient */
+.cta-btn {
+  background: linear-gradient(135deg, #7C3AED, #00E5FF);
+  transition: 0.3s;
 }
-.glow:hover {
-  box-shadow: 0 0 60px rgba(168,85,247,0.9);
+.cta-btn:hover {
+  box-shadow: 0 0 30px rgba(0,229,255,0.6);
+  transform: translateY(-2px);
 }
 
+/* Scenario buttons */
 .scenario-btn {
   background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(168,85,247,0.25);
+  border: 1px solid rgba(124,58,237,0.3);
   transition: .25s;
 }
 .scenario-btn:hover {
-  border-color: rgba(168,85,247,0.7);
-  box-shadow: 0 0 20px rgba(168,85,247,0.4);
+  border-color: #00E5FF;
+  box-shadow: 0 0 20px rgba(0,229,255,0.4);
 }
 .scenario-btn.active {
-  border-color: rgba(168,85,247,1);
-  box-shadow: 0 0 30px rgba(168,85,247,0.8);
+  border-color: #00E5FF;
+  box-shadow: 0 0 30px rgba(0,229,255,0.7);
 }
 
+/* Model thumbs */
 .model-thumb {
-  border: 2px solid rgba(168,85,247,0.2);
+  border: 2px solid rgba(124,58,237,0.3);
   transition: .25s;
 }
 .model-thumb:hover {
-  box-shadow: 0 0 20px rgba(168,85,247,0.4);
+  box-shadow: 0 0 20px rgba(0,229,255,0.4);
 }
 .model-thumb.active {
-  border-color: rgba(168,85,247,1);
-  box-shadow: 0 0 25px rgba(168,85,247,0.8);
+  border-color: #00E5FF;
+  box-shadow: 0 0 25px rgba(0,229,255,0.7);
+}
+
+/* Menu hover */
+nav a:hover {
+  color: #00E5FF;
 }
 </style>
 </head>
@@ -61,15 +70,15 @@ body {
   <div class="max-w-6xl mx-auto px-6 py-4 relative flex items-center">
 
     <nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-sm font-medium text-gray-200">
-      <a href="/neural-network-18plus" class="hover:text-white transition">Нейросеть 18+</a>
-      <a href="/video-generation" class="hover:text-white transition">Видео генерация</a>
-      <a href="/photo-animation" class="hover:text-white transition">Анимация фото</a>
-      <a href="/faq" class="hover:text-white transition">FAQ</a>
+      <a href="/neural-network-18plus">Нейросеть 18+</a>
+      <a href="/video-generation">Видео генерация</a>
+      <a href="/photo-animation">Анимация фото</a>
+      <a href="/faq">FAQ</a>
     </nav>
 
     <div class="ml-auto">
       <a href="https://t.me/yveo_online"
-         class="px-6 py-2 rounded-xl bg-purple-600 glow text-sm font-semibold">
+         class="px-6 py-2 rounded-xl text-sm font-semibold cta-btn">
         Попробовать
       </a>
     </div>
@@ -82,7 +91,7 @@ body {
        class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
   <source src="assets/yveo_background_loop1.mp4" type="video/mp4">
 </video>
-<div class="fixed inset-0 bg-black/40 -z-10"></div>
+<div class="fixed inset-0 bg-black/50 -z-10"></div>
 
 <!-- HERO -->
 <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-36">
@@ -100,13 +109,13 @@ body {
   </p>
 
   <a href="https://t.me/yveo_online"
-     class="glow bg-purple-600 px-10 py-4 rounded-xl text-lg font-semibold">
+     class="cta-btn px-10 py-4 rounded-xl text-lg font-semibold">
      Оживить фото сейчас
   </a>
 
 </section>
 
-<!-- DEMO SECTION -->
+<!-- DEMO -->
 <section class="py-20 px-6">
 <div class="max-w-6xl mx-auto">
 
@@ -117,7 +126,7 @@ body {
 <div class="grid md:grid-cols-2 gap-10 items-start">
 
   <div class="flex justify-center">
-    <div class="relative w-full max-w-xs md:max-w-sm aspect-[9/16] rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_rgba(168,85,247,0.35)]">
+    <div class="relative w-full max-w-xs md:max-w-sm aspect-[9/16] rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_rgba(124,58,237,0.35)]">
       <video id="demoVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
         <source src="assets/model1_s1.mp4" type="video/mp4">
       </video>
@@ -137,28 +146,23 @@ body {
 
     <div class="flex flex-wrap justify-center gap-3 md:flex-col md:gap-4">
 
-      <button onclick="changeScenario(1,this)"
-        class="scenario-btn active px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
+      <button onclick="changeScenario(1,this)" class="scenario-btn active px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
         Blowjob
       </button>
 
-      <button onclick="changeScenario(2,this)"
-        class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
+      <button onclick="changeScenario(2,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
         Doggy
       </button>
 
-      <button onclick="changeScenario(3,this)"
-        class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
+      <button onclick="changeScenario(3,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
         Cowgirl
       </button>
 
-      <button onclick="changeScenario(4,this)"
-        class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
+      <button onclick="changeScenario(4,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
         Doggy POV
       </button>
 
-      <button onclick="changeScenario(5,this)"
-        class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
+      <button onclick="changeScenario(5,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
         Cumshot
       </button>
 
@@ -170,16 +174,29 @@ body {
 </div>
 </section>
 
-<section id="cta" class="py-24 text-center">
-<h2 class="text-4xl font-bold mb-8">Попробуйте прямо сейчас</h2>
-<a href="https://t.me/yveo_online"
-   class="glow bg-purple-600 px-12 py-5 rounded-xl text-lg font-semibold">
-Перейти к генерации
-</a>
-</section>
+<!-- FOOTER -->
+<footer class="border-t border-purple-500/10 bg-black/20 backdrop-blur-md mt-20">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-10">
 
-<footer class="py-10 text-center text-sm text-gray-500">
-© YVEO AI
+    <div class="text-center md:text-left space-y-3">
+      <p class="text-sm text-gray-400">© YVEO AI</p>
+      <div class="flex flex-col md:flex-row gap-4 text-sm text-gray-400">
+        <a href="/terms" class="hover:text-[#00E5FF] transition">Terms & Conditions</a>
+        <a href="/refund_policy" class="hover:text-[#00E5FF] transition">Refund Policy</a>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center md:items-end gap-4">
+      <span class="text-sm text-gray-400">Способы оплаты</span>
+      <div class="flex items-center gap-6 opacity-80">
+        <img src="assets/payments/visa.png" class="h-8 object-contain">
+        <img src="assets/payments/mastercard.png" class="h-8 object-contain">
+        <img src="assets/payments/crypto.png" class="h-8 object-contain">
+        <img src="assets/payments/sbp.png" class="h-8 object-contain">
+      </div>
+    </div>
+
+  </div>
 </footer>
 
 <script>
@@ -207,58 +224,6 @@ function updateVideo() {
   video.play();
 }
 </script>
-
-  <footer class="relative border-t border-purple-500/10 bg-black/20 backdrop-blur-md mt-20">
-
-  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-
-    <!-- LEFT: LEGAL LINKS -->
-    <div class="text-center md:text-left space-y-3">
-      <p class="text-sm text-gray-400">© YVEO AI</p>
-
-      <div class="flex flex-col md:flex-row gap-4 text-sm text-gray-400">
-        <a href="/terms" class="hover:text-white transition">
-          Terms & Conditions
-        </a>
-        <a href="/refund_policy" class="hover:text-white transition">
-          Refund Policy
-        </a>
-      </div>
-    </div>
-
-    <!-- RIGHT: PAYMENT METHODS -->
-    <div class="flex flex-col items-center md:items-end gap-4">
-
-      <span class="text-sm text-gray-400">
-        Способы оплаты
-      </span>
-
-      <div class="flex items-center gap-6 opacity-80">
-
-        <img src="assets/payments/visa.png"
-             alt="Visa"
-             class="h-8 object-contain">
-
-        <img src="assets/payments/mastercard.png"
-             alt="Mastercard"
-             class="h-8 object-contain">
-
-        <img src="assets/payments/crypto.png"
-             alt="Crypto"
-             class="h-8 object-contain">
-
-        <img src="assets/payments/sbp.png"
-             alt="СБП"
-             class="h-8 object-contain">
-
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
-
 
 </body>
 </html>
