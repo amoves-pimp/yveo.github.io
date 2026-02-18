@@ -55,10 +55,10 @@ body {
 
 <!-- HEADER -->
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/20">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div class="max-w-6xl mx-auto px-6 py-4 relative flex items-center">
 
-    <!-- MENU -->
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-200">
+    <!-- CENTER MENU -->
+    <nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-sm font-medium text-gray-200">
       <a href="/neural-network-18plus"
          class="hover:text-white transition">
         Нейросеть 18+
@@ -80,14 +80,17 @@ body {
       </a>
     </nav>
 
-    <!-- CTA -->
-    <a href="https://t.me/yveo_online"
-       class="px-6 py-2 rounded-xl bg-purple-600 glow text-sm font-semibold">
-      Попробовать
-    </a>
+    <!-- RIGHT CTA -->
+    <div class="ml-auto">
+      <a href="https://t.me/yveo_online"
+         class="px-6 py-2 rounded-xl bg-purple-600 glow text-sm font-semibold">
+        Попробовать
+      </a>
+    </div>
 
   </div>
 </header>
+
 
 <!-- BACKGROUND -->
 <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
