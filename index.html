@@ -9,6 +9,7 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -59,6 +60,19 @@ body {
   border-color: #F5B041;
   box-shadow: 0 0 25px rgba(245,176,65,0.6);
 }
+  .brand {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.brand .ai {
+  background: linear-gradient(135deg, #7C3AED, #F5B041);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 </style>
 </head>
 
@@ -76,57 +90,45 @@ class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
 <header class="fixed top-0 left-0 w-full z-50 glass">
   <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
 
-    <!-- LEFT (пусто или лого при желании) -->
-    <div class="flex items-center gap-4">
-      <!-- Можно добавить маленькое лого сюда позже -->
+    <!-- LOGO -->
+    <div class="flex items-center">
+      <a href="/" class="brand">
+        <span class="text-white">yveo</span><span class="ai">.ai</span>
+      </a>
     </div>
 
-    <!-- CENTER MENU -->
+    <!-- MENU -->
     <nav class="hidden md:flex gap-10 text-sm font-medium text-gray-200">
-      <a href="/neural-network-18plus" class="hover:text-[#F5B041] transition">
-        Нейросеть 18+
-      </a>
-      <a href="/video-generation" class="hover:text-[#F5B041] transition">
-        Видео генерация
-      </a>
-      <a href="/photo-animation" class="hover:text-[#F5B041] transition">
-        Анимация фото
-      </a>
-      <a href="/faq" class="hover:text-[#F5B041] transition">
-        FAQ
-      </a>
+      <a href="/neural-network-18plus" class="hover:text-[#F5B041]">Нейросеть 18+</a>
+      <a href="/video-generation" class="hover:text-[#F5B041]">Видео генерация</a>
+      <a href="/photo-animation" class="hover:text-[#F5B041]">Анимация фото</a>
+      <a href="/faq" class="hover:text-[#F5B041]">FAQ</a>
     </nav>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT -->
     <div class="flex items-center gap-4 relative">
-
-      <!-- LANGUAGE BUTTON -->
       <button id="langToggle"
-        class="glass rounded-full px-4 py-2 text-sm flex items-center gap-2 hover:border-[#F5B041] transition">
+        class="glass rounded-full px-4 py-2 text-sm flex items-center gap-2">
         🇷🇺 RU
       </button>
 
-      <!-- DROPDOWN -->
       <div id="langMenu"
         class="hidden absolute right-0 top-14 glass rounded-2xl p-4 flex flex-col gap-3 text-sm min-w-[160px]">
-
         <button onclick="setLang('ru','🇷🇺 RU')" class="text-left hover:text-[#F5B041]">🇷🇺 Русский</button>
         <button onclick="setLang('en','🇬🇧 EN')" class="text-left hover:text-[#F5B041]">🇬🇧 English</button>
         <button onclick="setLang('es','🇪🇸 ES')" class="text-left hover:text-[#F5B041]">🇪🇸 Español</button>
         <button onclick="setLang('zh','🇨🇳 中文')" class="text-left hover:text-[#F5B041]">🇨🇳 中文</button>
-
       </div>
 
-      <!-- CTA -->
       <a href="https://t.me/yveo_online"
         class="cta-btn px-6 py-2 rounded-xl text-sm font-semibold">
         Попробовать
       </a>
-
     </div>
 
   </div>
 </header>
+
 
 
 <!-- HERO -->
