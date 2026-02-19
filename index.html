@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Оживить фото в видео онлайн - нейросеть | YVEO AI</title>
-<meta name="description" content="Оживите фото в видео с помощью нейросети. AI генерация видео по фото онлайн. Быстро, приватно.">
+<title>Создать эротическое видео из фото онлайн | YVEO AI</title>
+<meta name="description" content="Создавайте эротические видео из фото с помощью нейросети. 20 сценариев, быстрый результат, приватно и анонимно.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -18,185 +18,231 @@ body {
   overflow-x: hidden;
 }
 
+/* Liquid Glass */
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
 /* CTA */
 .cta-btn {
   background: linear-gradient(135deg, #7C3AED, #F5B041);
-  transition: 0.3s;
+  transition: .3s;
 }
 .cta-btn:hover {
   box-shadow: 0 0 35px rgba(245,176,65,0.6);
   transform: translateY(-2px);
 }
 
-/* Scenario buttons */
+/* Scenario */
 .scenario-btn {
-  background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(124,58,237,0.3);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
   transition: .25s;
 }
 .scenario-btn:hover {
   border-color: #F5B041;
-  box-shadow: 0 0 20px rgba(245,176,65,0.5);
 }
 .scenario-btn.active {
   border-color: #F5B041;
-  box-shadow: 0 0 30px rgba(245,176,65,0.7);
+  box-shadow: 0 0 20px rgba(245,176,65,0.6);
 }
 
-/* Model thumbs */
+/* Models */
 .model-thumb {
-  border: 2px solid rgba(124,58,237,0.3);
+  border: 2px solid rgba(255,255,255,0.2);
   transition: .25s;
-}
-.model-thumb:hover {
-  box-shadow: 0 0 20px rgba(245,176,65,0.4);
 }
 .model-thumb.active {
   border-color: #F5B041;
-  box-shadow: 0 0 25px rgba(245,176,65,0.7);
-}
-
-/* Menu hover */
-nav a:hover {
-  color: #F5B041;
+  box-shadow: 0 0 25px rgba(245,176,65,0.6);
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/20">
-  <div class="max-w-6xl mx-auto px-6 py-4 relative flex items-center">
+<!-- VIDEO BG -->
+<video autoplay muted loop playsinline preload="none"
+class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
+<source src="assets/yveo_background_loop1.mp4" type="video/mp4">
+</video>
+<div class="fixed inset-0 bg-black/50 -z-10"></div>
 
-    <nav class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-sm font-medium text-gray-200">
-      <a href="/neural-network-18plus">Нейросеть 18+</a>
-      <a href="/video-generation">Видео генерация</a>
-      <a href="/photo-animation">Анимация фото</a>
-      <a href="/faq">FAQ</a>
+<!-- HEADER -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 glass rounded-2xl px-8 py-4">
+  <div class="flex items-center gap-10 text-sm text-gray-200">
+
+    <nav class="hidden md:flex gap-8">
+      <a href="/neural-network-18plus" class="hover:text-[#F5B041]">Нейросеть 18+</a>
+      <a href="/video-generation" class="hover:text-[#F5B041]">Видео генерация</a>
+      <a href="/photo-animation" class="hover:text-[#F5B041]">Анимация фото</a>
+      <a href="/faq" class="hover:text-[#F5B041]">FAQ</a>
     </nav>
 
-    <div class="ml-auto">
-      <a href="https://t.me/yveo_online"
-         class="px-6 py-2 rounded-xl text-sm font-semibold cta-btn">
-        Попробовать
-      </a>
-    </div>
+    <a href="https://t.me/yveo_online"
+       class="cta-btn px-6 py-2 rounded-xl font-semibold text-sm">
+       Попробовать
+    </a>
 
   </div>
 </header>
 
-<!-- BACKGROUND -->
-<video autoplay muted loop playsinline preload="none"
-       class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
-  <source src="assets/yveo_background_loop1.mp4" type="video/mp4">
-</video>
-<div class="fixed inset-0 bg-black/50 -z-10"></div>
-
 <!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-36">
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-40">
 
-  <img src="assets/logo_2.png"
-       alt="YVEO AI"
-       class="w-36 md:w-52 mb-8 select-none pointer-events-none">
+<img src="assets/logo_2.png"
+     class="w-36 md:w-52 mb-8 select-none pointer-events-none">
 
-  <h1 class="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl">
-    Создавайте эротическое видео с помощью нейросети
-  </h1>
+<h1 class="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl">
+Создавайте эротическое видео с помощью нейросети
+</h1>
 
-  <p class="text-gray-300 max-w-2xl mb-10">
-    Загружайте фото, выбирайте сценарий — получите готовое видео за минуту.
-  </p>
+<p class="text-gray-300 max-w-2xl mb-10">
+Загрузите фото, выберите сценарий и получите готовое видео всего за несколько минут.
+</p>
 
-  <a href="https://t.me/yveo_online"
-     class="cta-btn px-10 py-4 rounded-xl text-lg font-semibold">
-     Оживить фото сейчас
-  </a>
+<a href="https://t.me/yveo_online"
+   class="cta-btn px-10 py-4 rounded-xl text-lg font-semibold">
+Оживить фото сейчас
+</a>
 
 </section>
 
-<!-- DEMO -->
-<section class="py-20 px-6">
-<div class="max-w-6xl mx-auto">
+<!-- HOW IT WORKS -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto glass rounded-3xl p-12">
 
-<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+<h2 class="text-3xl font-bold text-center mb-12">
+Как это работает?
+</h2>
+
+<div class="grid md:grid-cols-3 gap-10 text-center">
+
+<div>
+<p class="text-xl font-semibold mb-2">1. Выберите сценарий</p>
+<p class="text-gray-300 text-sm">
+Более 20 видео-сценариев с разными позами и стилями.
+</p>
+</div>
+
+<div>
+<p class="text-xl font-semibold mb-2">2. Загрузите фото</p>
+<p class="text-gray-300 text-sm">
+Используйте любое фото - всё обрабатывается автоматически.
+</p>
+</div>
+
+<div>
+<p class="text-xl font-semibold mb-2">3. Получите результат</p>
+<p class="text-gray-300 text-sm">
+Готовое видео будет доступно уже через 2 минуты.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- DEMO -->
+<section class="py-24 px-6">
+<div class="max-w-6xl mx-auto glass rounded-3xl p-12">
+
+<h2 class="text-3xl font-bold text-center mb-12">
 Примеры генераций
 </h2>
 
-<div class="grid md:grid-cols-2 gap-10 items-start">
+<div class="grid md:grid-cols-2 gap-12 items-start">
 
-  <div class="flex justify-center">
-    <div class="relative w-full max-w-xs md:max-w-sm aspect-[9/16] rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_rgba(124,58,237,0.35)]">
-      <video id="demoVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
-        <source src="assets/model1_s1.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+<div class="flex justify-center">
+<div class="aspect-[9/16] w-full max-w-sm rounded-2xl overflow-hidden">
+<video id="demoVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
+<source src="assets/model1_s1.mp4" type="video/mp4">
+</video>
+</div>
+</div>
 
-  <div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6">
 
-    <div class="flex justify-center md:justify-start gap-6">
-      <img src="assets/model1.jpg" onclick="changeModel(1,this)"
-           class="model-thumb active w-28 md:w-32 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
-      <img src="assets/model2.jpg" onclick="changeModel(2,this)"
-           class="model-thumb w-28 md:w-32 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
-      <img src="assets/model3.jpg" onclick="changeModel(3,this)"
-           class="model-thumb w-28 md:w-32 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
-    </div>
+<div class="flex gap-6 justify-center md:justify-start">
+<img src="assets/model1.jpg" onclick="changeModel(1,this)"
+class="model-thumb active w-28 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
+<img src="assets/model2.jpg" onclick="changeModel(2,this)"
+class="model-thumb w-28 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
+<img src="assets/model3.jpg" onclick="changeModel(3,this)"
+class="model-thumb w-28 aspect-[2/3] rounded-2xl object-cover cursor-pointer">
+</div>
 
-    <div class="flex flex-wrap justify-center gap-3 md:flex-col md:gap-4">
+<div class="flex flex-wrap justify-center gap-3 md:flex-col">
 
-      <button onclick="changeScenario(1,this)" class="scenario-btn active px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
-        Blowjob
-      </button>
-
-      <button onclick="changeScenario(2,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
-        Doggy
-      </button>
-
-      <button onclick="changeScenario(3,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
-        Cowgirl
-      </button>
-
-      <button onclick="changeScenario(4,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
-        Doggy POV
-      </button>
-
-      <button onclick="changeScenario(5,this)" class="scenario-btn px-4 py-2 text-sm rounded-full md:rounded-xl md:w-full md:text-base">
-        Cumshot
-      </button>
-
-    </div>
-
-  </div>
+<button onclick="changeScenario(1,this)" class="scenario-btn active px-4 py-2 rounded-xl">
+Blowjob
+</button>
+<button onclick="changeScenario(2,this)" class="scenario-btn px-4 py-2 rounded-xl">
+Doggy
+</button>
+<button onclick="changeScenario(3,this)" class="scenario-btn px-4 py-2 rounded-xl">
+Cowgirl
+</button>
+<button onclick="changeScenario(4,this)" class="scenario-btn px-4 py-2 rounded-xl">
+POV
+</button>
 
 </div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- SEO TEXT -->
+<section class="py-24 px-6">
+<div class="max-w-4xl mx-auto text-gray-300 space-y-6 text-sm leading-relaxed">
+
+<h2 class="text-3xl font-bold text-white mb-6">
+Нейросеть для создания эротического видео из фото
+</h2>
+
+<p>
+YVEO AI - это онлайн-сервис, который позволяет создавать эротические видео из обычных фотографий с помощью нейросети.
+Алгоритмы искусственного интеллекта анализируют изображение, движения и выбранный сценарий, после чего формируют реалистичное видео.
+</p>
+
+<p>
+Сервис подходит для тех, кто хочет быстро и анонимно получить персонализированный результат без сложных настроек.
+Вам не нужно устанавливать приложения или проходить регистрацию - вся генерация происходит через Telegram.
+</p>
+
+<p>
+Нейросеть поддерживает более 20 сценариев, что позволяет создавать разнообразные видео: от мягкой анимации до откровенных сцен.
+Фотографии не сохраняются на серверах после генерации, а процесс полностью автоматизирован.
+</p>
+
 </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="border-t border-purple-500/10 bg-black/20 backdrop-blur-md mt-20">
-  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-10">
+<footer class="mt-20 py-12 glass">
+<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-gray-400">
 
-    <div class="text-center md:text-left space-y-3">
-      <p class="text-sm text-gray-400">© YVEO AI</p>
-      <div class="flex flex-col md:flex-row gap-4 text-sm text-gray-400">
-        <a href="/terms" class="hover:text-[#F5B041] transition">Terms & Conditions</a>
-        <a href="/refund_policy" class="hover:text-[#F5B041] transition">Refund Policy</a>
-      </div>
-    </div>
+<div>
+© YVEO AI
+<div class="mt-2 flex gap-4">
+<a href="/terms" class="hover:text-[#F5B041]">Terms</a>
+<a href="/refund_policy" class="hover:text-[#F5B041]">Refund Policy</a>
+</div>
+</div>
 
-    <div class="flex flex-col items-center md:items-end gap-4">
-      <span class="text-sm text-gray-400">Нам доверяют</span>
-      <div class="flex items-center gap-6 opacity-80">
-        <img src="assets/visamc_logo.png" class="h-16 object-contain">
-        <img src="assets/sbp_logo.png" class="h-16 object-contain">
-        <img src="assets/usdt_logo.png" class="h-16 object-contain">
-        <img src="assets/btc_logo.png" class="h-16 object-contain">
-      </div>
-    </div>
+<div class="flex gap-6">
+<img src="assets/payments/visa.png" class="h-16">
+<img src="assets/payments/mastercard.png" class="h-16">
+<img src="assets/payments/crypto.png" class="h-16">
+<img src="assets/payments/sbp.png" class="h-16">
+</div>
 
-  </div>
+</div>
 </footer>
 
 <script>
@@ -204,29 +250,30 @@ let currentModel = 1;
 let currentScenario = 1;
 
 function changeModel(model, el) {
-  currentModel = model;
-  document.querySelectorAll('.model-thumb').forEach(m => m.classList.remove('active'));
-  el.classList.add('active');
-  updateVideo();
+currentModel = model;
+document.querySelectorAll('.model-thumb').forEach(m => m.classList.remove('active'));
+el.classList.add('active');
+updateVideo();
 }
 
 function changeScenario(scenario, el) {
-  currentScenario = scenario;
-  document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
-  el.classList.add('active');
-  updateVideo();
+currentScenario = scenario;
+document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
+el.classList.add('active');
+updateVideo();
 }
 
 function updateVideo() {
-  const video = document.getElementById('demoVideo');
-  video.src = `assets/model${currentModel}_s${currentScenario}.mp4`;
-  video.load();
-  video.play();
+const video = document.getElementById('demoVideo');
+video.src = `assets/model${currentModel}_s${currentScenario}.mp4`;
+video.load();
+video.play();
 }
 </script>
 
 </body>
 </html>
+
 
 
 
