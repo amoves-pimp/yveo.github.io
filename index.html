@@ -426,6 +426,16 @@ document.addEventListener('click', function(e) {
   }
 });
 </script>
+  <script>
+function scrollGallery(direction) {
+  const container = document.getElementById('gallery');
+  const scrollAmount = 320;
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
 
 </body>
 </html>
