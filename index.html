@@ -175,75 +175,104 @@ class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
     <!-- WRAPPER -->
     <div class="relative">
 
-      <!-- LEFT ARROW -->
-      <button onclick="scrollGallery(-1)"
-        class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 glass w-10 h-10 rounded-full items-center justify-center">
-        ←
-      </button>
+  <!-- LEFT ARROW -->
+  <button onclick="scrollGallery(-1)"
+    class="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 glass w-12 h-12 rounded-full items-center justify-center text-xl">
+    ←
+  </button>
 
-      <!-- RIGHT ARROW -->
-      <button onclick="scrollGallery(1)"
-        class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 glass w-10 h-10 rounded-full items-center justify-center">
-        →
-      </button>
+  <!-- RIGHT ARROW -->
+  <button onclick="scrollGallery(1)"
+    class="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 glass w-12 h-12 rounded-full items-center justify-center text-xl">
+    →
+  </button>
 
-      <!-- SCROLL -->
-      <div id="gallery"
-        class="flex gap-6 overflow-x-auto scroll-smooth px-2 md:px-12 scrollbar-hide">
+  <!-- SCROLL CONTAINER -->
+  <div id="gallery"
+    class="flex gap-8 overflow-x-auto scroll-smooth px-2 md:px-14 scrollbar-hide">
 
-        <!-- CARD -->
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode1.png" class="w-full h-full object-cover group-hover:scale-105 transition">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Служанка</span>
-        </div>
+    <!-- CARD 1 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode1.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Служанка
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode2.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Студентка</span>
-        </div>
+    <!-- CARD 2 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode2.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Студентка
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode3.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Нюдс</span>
-        </div>
+    <!-- CARD 3 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode3.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Нюдс
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode4.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Латекс</span>
-        </div>
+    <!-- CARD 4 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode4.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Латекс
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode5.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Секретарша</span>
-        </div>
+    <!-- CARD 5 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode5.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Секретарша
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode6.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Ведьма</span>
-        </div>
+    <!-- CARD 6 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode6.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Ведьма
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode7.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Сексуальное бельё</span>
-        </div>
+    <!-- CARD 7 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode7.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Сексуальное бельё
+      </span>
+    </div>
 
-        <div class="min-w-[300px] md:min-w-[260px] aspect-[16/9] relative rounded-2xl overflow-hidden group">
-          <img src="assets/photo_mode8.png" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40"></div>
-          <span class="absolute bottom-3 left-4 font-semibold">Бикини</span>
-        </div>
-
-      </div>
+    <!-- CARD 8 -->
+    <div class="min-w-[360px] md:min-w-[480px] aspect-[16/9] relative rounded-2xl overflow-hidden group cursor-pointer">
+      <img src="assets/photo_mode8.png"
+        class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <span class="absolute bottom-4 left-6 text-xl font-semibold">
+        Бикини
+      </span>
     </div>
 
   </div>
+</div>
 </section>
 
 <!-- HOW IT WORKS -->
