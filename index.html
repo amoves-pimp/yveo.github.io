@@ -103,7 +103,7 @@ class="fixed top-0 left-0 w-full h-full object-cover -z-20 opacity-70">
 
 <!-- HEADER -->
 <!-- HEADER FULL WIDTH LIQUID GLASS -->
-<header class="fixed top-0 left-0 w-full z-50">
+<header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-transform duration-300">
   <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
 
     <!-- LOGO -->
@@ -436,6 +436,49 @@ function scrollGallery(direction) {
   const scrollAmount = 320;
   container.scrollBy({
     left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+</script>
+    <script>
+let lastScroll = 0;
+const header = document.getElementById('mainHeader');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    // скролл вниз
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    // скролл вверх
+    header.style.transform = 'translateY(0)';
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
+    <button id="scrollTopBtn"
+  onclick="scrollToTop()"
+  class="fixed bottom-8 right-8 glass w-12 h-12 rounded-full hidden items-center justify-center text-xl z-50 transition-opacity duration-300">
+  ↑
+</button>
+    <script>
+const scrollBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.remove('hidden');
+    scrollBtn.classList.add('flex');
+  } else {
+    scrollBtn.classList.add('hidden');
+    scrollBtn.classList.remove('flex');
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
     behavior: 'smooth'
   });
 }
