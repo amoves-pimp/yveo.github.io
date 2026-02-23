@@ -562,6 +562,27 @@ function scrollToTop() {
   });
 }
 </script>
+    <script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
+
+    document.querySelectorAll('.faq-answer').forEach(el => {
+      if (el !== answer) el.classList.add('hidden');
+    });
+
+    document.querySelectorAll('.faq-icon').forEach(ic => {
+      if (ic !== icon) ic.textContent = '+';
+    });
+
+    answer.classList.toggle('hidden');
+    icon.textContent = answer.classList.contains('hidden') ? '+' : '−';
+  });
+});
+</script>
+    
 
 </body>
 </html>
